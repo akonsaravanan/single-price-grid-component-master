@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+  --Cyan-primary: hsl(179, 62%, 43%);
+  --Bright-Yellow-primary: hsl(71, 73%, 54%);
+  --Light-Gray-neutral: hsl(204, 43%, 93%);
+  --Grayish-Blue-neutral: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-price-grid {
+  margin: 1rem 1rem;
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "a a"
+    "b c";
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 2px 2px 20px 2px rgb(0 0 0 / 11%);
+}
+.section-community {
+  grid-area: a;
+}
+.section-subscription {
+  grid-area: b;
+}
+.section-whyus {
+  grid-area: c;
+}
+
+.container {
+  padding: 40px;
+}
+
+.section-whyus {
+  background-color: hsl(179, 64%, 49%);
+  color: var(--Light-Gray-neutral);
+}
+
+.section-community h2 {
+  color: var(--Cyan-primary);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.section-community h3 {
+  color: var(--Bright-Yellow-primary);
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.section-community p {
+  color: var(--Grayish-Blue-neutral);
+  line-height: 1.6;
+}
+
+.section-subscription {
+  background-color: hsl(179, 62%, 46%);
+  color: var(--Light-Gray-neutral);
+}
+.section-subscription h3 {
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.section-subscription .price span {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--Light-Gray-neutral);
+  /* margin-right: 8px; */
+}
+
+.section-subscription .price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: hsl(179, 97%, 73%);
+}
+.section-subscription .detail {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.section-subscription a {
+  color: #fff;
+  font-size: 13px;
+  background-color: var(--Bright-Yellow-primary);
+  display: flex;
+  justify-content: center;
+  padding: 14px 0;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 40px;
+  box-shadow: 2px 2px 20px 2px rgb(0 0 0 / 11%);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.section-whyus {
+  padding-left: 60px;
+  background-color: hsl(179, 64%, 49%);
+  color: var(--Light-Gray-neutral);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.section-whyus h3 {
+  margin-top: -4px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 500px) {
+  .single-price-grid {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "a "
+      "b "
+      "c";
+  }
+}
